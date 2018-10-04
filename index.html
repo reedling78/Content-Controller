@@ -6,8 +6,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="apple-touch-startup-image" href="/splashscreen.jpg">
-    <meta name="apple-mobile-web-app-title" content="Coates Controller">
-
+    <meta name="apple-mobile-web-app-title" content="Coates&nbsp:Controller">
+    <meta name="apple-mobile-web-app-capable" content="yes">
 
 
     <!-- Bootstrap CSS -->
@@ -166,15 +166,19 @@
             })
 
             //router
-            function router() {
+            function router(isHomePage) {
                 $('.page').addClass('d-none')
-                $('[data-page="' + location.hash.replace('#', '') + '"]').removeClass('d-none')
+                if (isHomePage) {
+                    $('[data-page="home"]').removeClass('d-none')
+                } else {
+                    $('[data-page="' + location.hash.replace('#', '') + '"]').removeClass('d-none')
+                }
             }
 
             $(window).on('hashchange', function() {
                 router()
             });
-            router()
+            router(true)
             
         })
     </script>
