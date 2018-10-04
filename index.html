@@ -29,7 +29,7 @@
 <body>
 
     <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#"><img src="https://www.coatesgroup.com/wp-content/uploads/2017/05/Coates-Logo-Colour.png"
+        <a class="navbar-brand" href="#home"><img src="https://www.coatesgroup.com/wp-content/uploads/2017/05/Coates-Logo-Colour.png"
                 width="120" height="30" class="d-inline-block align-top" alt=""></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
             aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -132,6 +132,9 @@
     <div class="container page d-none" data-page="cod">
         <div class="row">
             <div class="col">
+
+                
+
                 <h4>COD</h4>
                 
                 <h5>Diet Coke</h5>
@@ -166,13 +169,10 @@
             })
 
             //router
-            function router(isHomePage) {
+            function router() {
+                var hash = (location.hash !== '') ? location.hash.replace('#', '') : 'home'
                 $('.page').addClass('d-none')
-                if (isHomePage) {
-                    $('[data-page="home"]').removeClass('d-none')
-                } else {
-                    $('[data-page="' + location.hash.replace('#', '') + '"]').removeClass('d-none')
-                }
+                $('[data-page="' + location.hash.replace('#', '') + '"]').removeClass('d-none')
             }
 
             $(window).on('hashchange', function() {
