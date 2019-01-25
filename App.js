@@ -93,7 +93,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("module.exports = {\n  \"switchboardHQ\": \"https://us.content.coates.io\",\n  \"test\": \"test\",\n  \"socketserver\": \"https://generic-socket-server.herokuapp.com\",\n  \"productsDatasource\": \"/api/dataSource/US-GenericContentDemo-POS.csv.jsonp\",\n  \"personasDatasource\": \"/api/dataSource/US-GenericContentDemo-Personas.csv.jsonp\"\n};\n\n//# sourceURL=webpack:///./configs/appConfig.js?");
+eval("module.exports = {\n  \"switchboardHQ\": \"https://us.content.coates.io\",\n  \"test\": \"test\",\n  \"socketserver\": \"https://coates-extension-backend.herokuapp.com\",\n  \"productsDatasource\": \"/api/dataSource/US-GenericContentDemo-POS.csv.jsonp\",\n  \"personasDatasource\": \"/api/dataSource/US-GenericContentDemo-Personas.csv.jsonp\"\n};\n\n//# sourceURL=webpack:///./configs/appConfig.js?");
 
 /***/ }),
 
